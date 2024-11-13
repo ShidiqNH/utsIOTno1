@@ -4,11 +4,11 @@
 
 // Konfigurasi WiFi
 const char* ssid = "Wokwi-GUEST";
-const char* pass = "";  // Pastikan ini adalah password WiFi yang benar
+const char* pass = "";
 
 // Konfigurasi MQTT
 const char* mqtt_server = "broker.hivemq.com";
-const char* clientName = "espShidiq";  // Nama Client MQTT
+const char* clientName = "espShidiq";
 const char* topicSuhu = "Shidiq152022016/suhu";        
 const char* topicKelembaban = "Shidiq152022016/kelembaban";  
 const char* topicRelay = "Shidiq152022016/relay";     
@@ -137,6 +137,6 @@ void loop() {
   Serial.println(relayStatus);
   client.publish(topicRelay, relayStatus.c_str());
 
-  // Delay 2 detik sebelum membaca lagi
+  // Delay 5 detik sebelum membaca lagi
   delay(5000);
 }
