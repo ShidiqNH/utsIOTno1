@@ -96,7 +96,7 @@ void loop() {
   Serial.print("Suhu: ");
   Serial.println(suhu);
   Serial.print("kelembaban: ");
-  Serial.print(kelembaban);
+  Serial.println(kelembaban);
 
   // Pengkondisian suhu untuk LED, buzzer, dan relay
   if (suhu > 35) {
